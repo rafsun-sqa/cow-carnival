@@ -1,40 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cow Carnival 🐄</title>
-
-  <!-- ✅ Tailwind CSS CDN (No install needed) -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- ✅ Your custom CSS (optional) -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- ✅ Your custom JS (optional) -->
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cow Carnival 2025 - Celebrate Qurbani</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    header {
+      background: #ff6f61;
+      color: white;
+      padding: 1.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgb(255 111 97 / 0.4);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+    p.subtitle {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    img.cow {
+      max-width: 300px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+    }
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    button.fun-btn {
+      margin-top: 2rem;
+      background-color: #ff6f61;
+      border: none;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button.fun-btn:hover {
+      background-color: #e65b50;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
-<body class="bg-yellow-50 text-gray-800">
-
-  <header class="bg-green-200 p-4 text-center">
-    <h1 class="text-3xl font-bold">🐄 Cow Carnival</h1>
-    <nav class="mt-2 space-x-4">
-      <a href="index.html" class="text-blue-600 hover:underline">Home</a>
-      <a href="fun-zone.html" class="text-blue-600 hover:underline">Fun Zone</a>
-      <a href="cow-info.html" class="text-blue-600 hover:underline">Cow Info</a>
-      <a href="gallery.html" class="text-blue-600 hover:underline">Gallery</a>
-      <a href="submit.html" class="text-blue-600 hover:underline">Submit</a>
-    </nav>
+<body>
+  <header>
+    <h1>Cow Carnival 2025</h1>
+    <p class="subtitle">Celebrate Qurbani with fun and joy!</p>
   </header>
 
-  <main class="p-6 text-center">
-    <h2 class="text-2xl font-semibold">Welcome to Cow Carnival!</h2>
-    <p class="mt-4">Celebrate Qurbani with cow games, info, and fun!</p>
+  <img
+    class="cow"
+    src="https://images.unsplash.com/photo-1504203701163-bd0590a5aa01?auto=format&fit=crop&w=600&q=80"
+    alt="Happy cow"
+  />
+
+  <main>
+    <p>Welcome to the Cow Carnival! 🎉</p>
+    <p>
+      Here you can learn fun facts about cows, take a quick quiz, and even
+      generate a funny cow name for your Qurbani celebration!
+    </p>
+
+    <button class="fun-btn" onclick="generateName()">Generate Cow Name 🐄</button>
+
+    <p id="name-output" style="margin-top: 1.5rem; font-weight: 700; font-size: 1.3rem; color: #ff6f61;"></p>
   </main>
 
-  <footer class="bg-green-200 text-center p-4 mt-6">
-    <p>&copy; 2025 Cow Carnival</p>
-  </footer>
+  <footer>© 2025 Cow Carnival. All rights reserved.</footer>
 
+  <script>
+    const names = [
+      'MooMaster',
+      'Sir Bovine',
+      'Lady Moona',
+      'Cowabunga',
+      'Moozilla',
+      'Sir Milk-a-lot',
+      'Daisy Duke',
+      'Boss Bessie',
+      'Captain Hooves',
+      'Princess Udderly',
+    ];
+
+    function generateName() {
+      const name = names[Math.floor(Math.random() * names.length)];
+      document.getElementById('name-output').textContent = `Your cow name is: ${name}!`;
+    }
+  </script>
 </body>
 </html>
